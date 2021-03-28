@@ -17,8 +17,14 @@ const HomeSearch = () => {
           <MaterialIcons name={'keyboard-arrow-down'} size={15} />
         </View>
       </View>
-      {/* Previous Destination */}
 
+      {/* Previous Destination */}
+      <View style={styles.row}>
+        <View style={styles.iconContainer}>
+          <AntDesign name={'clockcircle'} size={19} color={'#fff'} />
+        </View>
+        <Text style={styles.destinationText}>Space Night Club</Text>
+      </View>
       {/* Home Destination */}
     </View>
   );
