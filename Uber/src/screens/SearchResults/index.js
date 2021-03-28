@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
+import HomeMap from '../../components/HomeMap';
+import UberTypes from '../../components/UberTypes';
 
 const SearchResults = () => {
   return (
     <View>
-      <Text>search result component</Text>
+      <HomeMap />
+      <UberTypes />
     </View>
   );
 };
