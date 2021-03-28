@@ -1,13 +1,17 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, SafeAreaView} from 'react-native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import styles from './styles';
 
 const DestinationSearch = () => {
-  const [fromText, setFromText] = useState('');
-  const [destinationText, setDestinationText] = useState('');
   const [originPlace, setOriginPlace] = useState(null);
   const [destinationPlace, setDestinationPlace] = useState(null);
+
+  useEffect(() => {
+    if (originPlace && setOriginPlace) {
+      console.warn('Redirect to results');
+    }
+  }, [originPlace, destinationPlace]);
 
   return (
     <SafeAreaView>
@@ -32,7 +36,7 @@ const DestinationSearch = () => {
           placeholder="Where to?"
           onPress={(data, details = null) => {
             // 'details' is provided when fetchDetails = true
-            setDestinationPlace({data, details});
+            setOriginPlace({data, details});
           }}
           styles={{
             textInput: styles.textInput,
