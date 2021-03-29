@@ -7,10 +7,9 @@ const CovidMessage = () => {
     <View style={styles.container}>
       <Text style={styles.title}>Travel only if necessary </Text>
       <Text style={styles.text}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+        We're reminding everyone who uses Uber to follow advice from public
+        health authorities. If you're sick, stay home and away from others. Wash
+        your hands frequently, and cover your cough or sneeze.
       </Text>
       <Text style={styles.learnMore}>Learn more </Text>
     </View>
