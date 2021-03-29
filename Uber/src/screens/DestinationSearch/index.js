@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {View, SafeAreaView} from 'react-native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
+import PlaceRow from './PlaceRow';
 import styles from './styles';
 
 const DestinationSearch = () => {
@@ -22,6 +23,7 @@ const DestinationSearch = () => {
             // 'details' is provided when fetchDetails = true
             setDestinationPlace({data, details});
           }}
+          suppressDefaultStyles
           styles={{
             textInput: styles.textInput,
             container: {
@@ -30,12 +32,17 @@ const DestinationSearch = () => {
               left: 10,
               right: 10,
             },
+            listView: {
+              position: 'absolute',
+              top: 99,
+            },
           }}
           fetchDetails
           query={{
             key: 'AIzaSyCvkTcVKIt8528UDp__D - S_du5zd__jE14',
             language: 'en',
           }}
+          renderRow={data => <PlaceRow data={data} />}
         />
 
         <GooglePlacesAutocomplete
@@ -44,11 +51,12 @@ const DestinationSearch = () => {
             // 'details' is provided when fetchDetails = true
             setOriginPlace({data, details});
           }}
+          suppressDefaultStyles
           styles={{
             textInput: styles.textInput,
             container: {
               position: 'absolute',
-              top: 50,
+              top: 55,
               left: 10,
               right: 10,
             },
@@ -58,6 +66,7 @@ const DestinationSearch = () => {
             key: 'AIzaSyCvkTcVKIt8528UDp__D - S_du5zd__jE14',
             language: 'en',
           }}
+          renderRow={data => <PlaceRow data={data} />}
         />
       </View>
     </SafeAreaView>
