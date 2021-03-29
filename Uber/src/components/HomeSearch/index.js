@@ -3,11 +3,15 @@ import {View, Text, Pressable} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
+import {useNavigation} from '@react-navigation/native';
+
 import styles from './styles';
 
 const HomeSearch = () => {
+  const navigation = useNavigation();
+
   const goToSearch = () => {
-    console.warn('Search');
+    navigation.navigate('DestinationSearch');
   };
 
   return (
