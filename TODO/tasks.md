@@ -1,8 +1,8 @@
-<b>MY TODOs + Resources:</b>
+<b>My Task's + References:</b>
 
 - Customize Maps
-- Customize Google Places Autocomplete - Track user location (Realtime)
-- Suggest nearby places
+- Customize Google Places Autocomplete - User location (Realtime)
+- Nearby places suggestions
 - Basic Navigation
 - Drawer Navigation (Hamburger menu)
 
@@ -24,7 +24,7 @@
 <hr>
 <details>
   <summary>Click to expand for Resources + installation steps</summary>
-<b>Resources:</b>
+<b>iOS Resources:</b>
 
 ([React Native Google Places Library Autocomplete](https://github.com/FaridSafi/react-native-google-places-autocomplete/blob/master/README.md))
 
