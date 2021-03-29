@@ -63,6 +63,9 @@ const DestinationSearch = () => {
             language: 'en',
           }}
           renderRow={data => <PlaceRow data={data} />}
+          renderDescription={data => {
+            data.description || data.vicinity;
+          }}
         />
         {/* Circles on left of origin input */}
         <View style={styles.circle} />

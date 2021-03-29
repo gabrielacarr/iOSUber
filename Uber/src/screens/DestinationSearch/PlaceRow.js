@@ -9,7 +9,9 @@ const PlaceRow = ({data}) => {
       <View style={styles.iconContainer}>
         <Entypo name="location-pin" size={20} color={'white'} />
       </View>
-      <Text style={styles.locationText}>{data.description}</Text>
+      <Text style={styles.locationText}>
+        {data.description || data.vicinity}
+      </Text>
     </View>
   );
 };
