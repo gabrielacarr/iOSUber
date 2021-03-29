@@ -37,7 +37,13 @@ const RouteMap = () => {
           destination={destination}
           apikey={GOOGLE_MAPS_APIKEY}
           strokeWidth={4}
-          strokeColor="blue"
+          strokeColor="#4895ef"
+        />
+        <Marker coordinate={origin} title={'Origin'} pinColor={'#4895ef'} />
+        <Marker
+          coordinate={destination}
+          title={'Destination'}
+          pinColor={'#4cc9f0'}
         />
       </MapView>
     </View>
