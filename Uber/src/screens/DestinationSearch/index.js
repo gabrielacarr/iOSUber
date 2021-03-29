@@ -24,6 +24,12 @@ const DestinationSearch = () => {
           }}
           styles={{
             textInput: styles.textInput,
+            container: {
+              position: 'absolute',
+              top: 0,
+              left: 10,
+              right: 10,
+            },
           }}
           fetchDetails
           query={{
@@ -40,6 +46,12 @@ const DestinationSearch = () => {
           }}
           styles={{
             textInput: styles.textInput,
+            container: {
+              position: 'absolute',
+              top: 50,
+              left: 10,
+              right: 10,
+            },
           }}
           fetchDetails
           query={{
