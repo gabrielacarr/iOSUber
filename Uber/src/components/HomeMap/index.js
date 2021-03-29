@@ -6,13 +6,13 @@ const HomeMap = () => {
   return (
     <View
       style={{
-        height: 300,
+        height: 400,
         backgroundColor: '#a0abff',
         justifyContent: 'center',
         alignItems: 'center',
       }}>
       <MapView
-        style={{height: '100%', width: '100%'}}
+        style={{width: '100%', height: '100%'}}
         provider={PROVIDER_GOOGLE}
         initialRegion={{
           latitude: 37.78825,
