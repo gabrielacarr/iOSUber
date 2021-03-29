@@ -23,6 +23,7 @@ const DestinationSearch = () => {
             // 'details' is provided when fetchDetails = true
             setDestinationPlace({data, details});
           }}
+          enablePoweredByContainer={false}
           suppressDefaultStyles
           styles={{
             textInput: styles.textInput,
@@ -44,6 +45,7 @@ const DestinationSearch = () => {
             // 'details' is provided when fetchDetails = true
             setOriginPlace({data, details});
           }}
+          enablePoweredByContainer={false}
           suppressDefaultStyles
           styles={{
             textInput: styles.textInput,
