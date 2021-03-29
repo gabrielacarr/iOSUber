@@ -26,16 +26,9 @@ const DestinationSearch = () => {
           suppressDefaultStyles
           styles={{
             textInput: styles.textInput,
-            container: {
-              position: 'absolute',
-              top: 0,
-              left: 10,
-              right: 10,
-            },
-            listView: {
-              position: 'absolute',
-              top: 99,
-            },
+            container: styles.autocompleteContainer,
+            listView: styles.listView,
+            separator: styles.separator,
           }}
           fetchDetails
           query={{
@@ -55,11 +48,10 @@ const DestinationSearch = () => {
           styles={{
             textInput: styles.textInput,
             container: {
-              position: 'absolute',
+              ...styles.autocompleteContainer,
               top: 55,
-              left: 10,
-              right: 10,
             },
+            separator: styles.separator,
           }}
           fetchDetails
           query={{
