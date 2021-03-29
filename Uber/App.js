@@ -16,11 +16,9 @@ import {
 } from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
 
-// import HomeScreen from './src/screens/HomeScreen';
-// import SearchResults from './src/screens/SearchResults';
-import DestinationSearch from './src/screens/DestinationSearch';
-
 import HomeScreen from './src/screens/HomeScreen';
+// import SearchResults from './src/screens/SearchResults';
+// import DestinationSearch from './src/screens/DestinationSearch';
 
 navigator.geolocation = require('@react-native-community/geolocation');
 
@@ -61,9 +59,9 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
 
-      {/* <HomeScreen /> */}
+      <HomeScreen />
       {/* <SearchResults /> */}
-      <DestinationSearch />
+      {/* <DestinationSearch /> */}
     </>
   );
 };
