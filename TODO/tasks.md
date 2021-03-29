@@ -42,6 +42,13 @@ npx pod-install
 // Once library and API are enabled, install pods
 ```
 
+then,
+
+```
+npx react-native run-ios
+// To rebuild
+```
+
 </details>
 
 <hr>
