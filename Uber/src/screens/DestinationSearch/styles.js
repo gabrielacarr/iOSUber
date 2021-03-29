@@ -38,7 +38,8 @@ const styles = StyleSheet.create({
   },
   locationText: {},
   ///////////////////////////////
-  // Circle/line left of origins
+  // Circle/ Square/ line
+  // left of origin
   //////////////////////////////
   circle: {
     width: 5,
