@@ -36,6 +36,8 @@ const RouteMap = () => {
           origin={origin}
           destination={destination}
           apikey={GOOGLE_MAPS_APIKEY}
+          strokeWidth={4}
+          strokeColor="blue"
         />
       </MapView>
     </View>
