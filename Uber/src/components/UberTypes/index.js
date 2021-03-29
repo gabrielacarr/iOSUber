@@ -17,7 +17,7 @@ const UberTypes = () => {
         onPress={confirm}
         style={{
           backgroundColor: 'black',
-          padding: 10,
+          padding: 7,
           margin: 10,
           alignItems: 'center',
         }}>
