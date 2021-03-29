@@ -5,9 +5,8 @@
  * @format
  * @flow strict-local
  */
-
+import 'react-native-gesture-handler';
 import React, {useEffect} from 'react';
-
 import {
   SafeAreaView,
   PermissionsAndroid,
@@ -16,9 +15,7 @@ import {
 } from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
 
-import HomeScreen from './src/screens/HomeScreen';
-// import SearchResults from './src/screens/SearchResults';
-// import DestinationSearch from './src/screens/DestinationSearch';
+import Router from './src/navigation/Root.js';
 
 navigator.geolocation = require('@react-native-community/geolocation');
 
@@ -59,9 +56,7 @@ const App: () => React$Node = () => {
     <>
       <StatusBar barStyle="dark-content" />
 
-      <HomeScreen />
-      {/* <SearchResults /> */}
-      {/* <DestinationSearch /> */}
+      <Router />
     </>
   );
 };
