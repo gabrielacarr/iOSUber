@@ -62,6 +62,12 @@ const DestinationSearch = () => {
           }}
           renderRow={data => <PlaceRow data={data} />}
         />
+        {/* Circles on left of origin input */}
+        <View style={styles.circle} />
+        {/* Line between dots */}
+        <View style={styles.line} />
+        {/* Square near destination input */}
+        <View style={styles.square} />
       </View>
     </SafeAreaView>
   );
