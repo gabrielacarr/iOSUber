@@ -4,6 +4,16 @@ import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete'
 import PlaceRow from './PlaceRow';
 import styles from './styles';
 
+// Predefined places
+const homePlace = {
+  description: 'Home',
+  geometry: {location: {lat: 48.8152937, lng: 2.4597668}},
+};
+const workPlace = {
+  description: 'Work',
+  geometry: {location: {lat: 48.8496818, lng: 2.2940881}},
+};
+
 const DestinationSearch = () => {
   const [originPlace, setOriginPlace] = useState(null);
   const [destinationPlace, setDestinationPlace] = useState(null);
@@ -39,6 +49,10 @@ const DestinationSearch = () => {
             language: 'en',
           }}
           renderRow={data => <PlaceRow data={data} />}
+          renderDescription={data => {
+            data.description || data.vicinity;
+          }}
+          predefinedPlaces={[homePlace, workPlace]}
         />
 
         <GooglePlacesAutocomplete
