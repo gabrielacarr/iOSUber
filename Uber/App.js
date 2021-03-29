@@ -12,7 +12,7 @@ import {SafeAreaView, StatusBar} from 'react-native';
 
 // import HomeScreen from './src/screens/HomeScreen';
 import SearchResults from './src/screens/SearchResults';
-import HomeScreen from './src/screens/HomeScreen';
+// import HomeScreen from './src/screens/HomeScreen';
 
 const App: () => React$Node = () => {
   return (
@@ -20,7 +20,7 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
 
       {/* <HomeScreen /> */}
-      <HomeScreen />
+      <SearchResults />
     </>
   );
 };
