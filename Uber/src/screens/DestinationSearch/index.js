@@ -25,6 +25,8 @@ const DestinationSearch = () => {
           }}
           enablePoweredByContainer={false}
           suppressDefaultStyles
+          currentLocation={true}
+          currentLocationLabel="Current Location"
           styles={{
             textInput: styles.textInput,
             container: styles.autocompleteContainer,
