@@ -70,6 +70,7 @@ npm install @react-navigation/native
 // Library installation
 
 npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+npm install @react-navigation/stack
 // Install dependencies
 
 npx pod-install
@@ -80,7 +81,9 @@ npx react-native run-ios
 
 
 import 'react-native-gesture-handler';
-// Then insert in app.js to initialize
+import { createStackNavigator } from '@react-navigation/stack';
+const Stack = createStackNavigator();
+// Then insert in app.js to initialize (or corresponding file)
 ```
 
 </details>
