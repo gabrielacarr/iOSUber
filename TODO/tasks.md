@@ -65,7 +65,7 @@ npx react-native run-ios
 ([React Native Navigation](https://reactnavigation.org/docs/getting-started))
 
 ```
-cd into ios  &&
+
 npm install @react-navigation/native
 // Library installation
 
@@ -73,9 +73,11 @@ npm install react-native-reanimated react-native-gesture-handler react-native-sc
 npm install @react-navigation/stack
 // Install dependencies
 
+// app + cd ios/
 npx pod-install
 // Once library and API are enabled, install pods
 
+// cd..
 npx react-native run-ios
 // To rebuild
 
