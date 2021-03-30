@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Pressable} from 'react-native';
+import {View, Text, Pressable, ImageBackground} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Entypo from 'react-native-vector-icons/Entypo';
 import {
@@ -20,19 +20,19 @@ const CustomDrawer = props => {
           }}>
           <View
             style={{
-              backgroundColor: '#cacaca',
-              width: 50,
-              height: 50,
-              borderRadius: 25,
+              backgroundColor: '#75bbc70',
+              width: 60,
+              height: 60,
+              borderRadius: 35,
               marginRight: 10,
               bottom: 20,
             }}>
-            <Entypo name={'user'} size={49} color={'black'} />
+            <Entypo name={'user'} size={59} color={'black'} />
           </View>
           <View style={{alignItems: 'center'}}>
             <Text
               style={{
-                color: 'white',
+                color: '#e6f9fc',
                 fontSize: 20,
               }}>
               Gabriela Cardo
@@ -50,17 +50,34 @@ const CustomDrawer = props => {
             borderTopWidth: 1,
             borderBottomWidth: 1,
             borderBottomColor: '#3A3A3A',
-            paddingVertical: 25,
-            marginVertical: 10,
+            paddingVertical: 20,
+            marginVertical: 5,
           }}>
           <Pressable
             onPress={() => {
               console.warn('Messages');
             }}>
-            <Text style={{color: '#DFDEDE', flexDirection: 'row'}}>
+            <Text
+              style={{
+                color: '#DFDEDE',
+                marginBottom: 10,
+                marginLeft: 85,
+              }}>
               Messages
-              <AntDesign name={'right'} size={13} color={'#DFDEDE'} />
             </Text>
+            <View
+              style={{
+                width: 40,
+                height: 5,
+                backgroundColor: '#51a2b0',
+                position: 'relative',
+                marginLeft: 85,
+                marginBottom: 10,
+                top: 2,
+                left: 15,
+                borderRadius: 5,
+              }}
+            />
           </Pressable>
         </View>
         {/* Do More row */}
@@ -68,7 +85,8 @@ const CustomDrawer = props => {
           onPress={() => {
             console.warn('Do more');
           }}>
-          <Text style={{color: '#545353', paddingVertical: 5}}>
+          <Text
+            style={{color: '#545353', paddingVertical: 5, marginBottom: 10}}>
             Do more with your account
           </Text>
         </Pressable>
@@ -78,9 +96,32 @@ const CustomDrawer = props => {
           onPress={() => {
             console.warn('Food delivery');
           }}>
-          <Text style={{color: '#DFDEDE', paddingVertical: 5}}>
-            Get food delivered!
-          </Text>
+          <ImageBackground
+            source={require('../assets/images/getFood.png')}
+            style={{
+              width: 300,
+              height: 100,
+              marginLeft: -20,
+            }}>
+            <Text
+              style={{
+                marginLeft: 18,
+                marginTop: 12,
+                color: '#DFDEDE',
+                paddingVertical: 5,
+                fontSize: 18,
+              }}>
+              Order food while you ride
+            </Text>
+            <Text
+              style={{
+                fontSize: 13,
+                color: '#c5c9c9',
+                marginLeft: 20,
+              }}>
+              Local restaurants, delivered at Uber speed with just a tap.
+            </Text>
+          </ImageBackground>
         </Pressable>
 
         {/* Make Money Row */}
@@ -88,7 +129,7 @@ const CustomDrawer = props => {
           onPress={() => {
             console.warn('Make money');
           }}>
-          <Text style={{color: '#DFDEDE', paddingVertical: 5}}>
+          <Text style={{color: '#DFDEDE', paddingVertical: 5, marginTop: 10}}>
             Make money driving
           </Text>
         </Pressable>
