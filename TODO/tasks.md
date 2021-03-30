@@ -96,3 +96,21 @@ const Stack = createStackNavigator();
 - Install Drawer Navigation package
 - Setup Basic Drawer Navigation
 - Customize Drawer Navigation
+<details>
+  <summary>Click to expand for Resources + installation steps</summary>
+<b>iOS Resources:</b>
+
+([React Native Drawer Navigation](https://reactnavigation.org/docs/drawer-based-navigation/))
+
+```
+
+npm install @react-navigation/drawer
+
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
+
+const Drawer = createDrawerNavigator();
+// Then insert in app.js to initialize (or corresponding file)
+```
+
+</details>
