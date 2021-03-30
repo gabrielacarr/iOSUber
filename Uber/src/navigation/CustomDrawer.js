@@ -38,21 +38,23 @@ const CustomDrawer = props => {
               Gabriela Cardo
             </Text>
             <Text style={{color: '#A19F9F'}}>
-              5.00 <AntDesign name={'star'} size={13} color={'#A19F9F'} />
+              5.00 <AntDesign name={'star'} size={12.6} color={'#A19F9F'} />
             </Text>
           </View>
         </View>
 
         {/* Messages Row */}
         <View
-          style={{
-            borderTopColor: '#3A3A3A',
-            borderTopWidth: 1,
-            borderBottomWidth: 1,
-            borderBottomColor: '#3A3A3A',
-            paddingVertical: 20,
-            marginVertical: 5,
-          }}>
+          style={
+            {
+              // borderTopColor: '#3A3A3A',
+              // borderTopWidth: 1,
+              // borderBottomWidth: 1,
+              // borderBottomColor: '#3A3A3A',
+              // paddingVertical: 20,
+              // marginVertical: 5,
+            }
+          }>
           <Pressable
             onPress={() => {
               console.warn('Messages');
@@ -60,19 +62,19 @@ const CustomDrawer = props => {
             <Text
               style={{
                 color: '#DFDEDE',
-                marginBottom: 10,
+                marginBottom: 5,
                 marginLeft: 85,
               }}>
               Messages
             </Text>
             <View
               style={{
-                width: 40,
-                height: 5,
+                width: 85,
+                height: 4,
                 backgroundColor: '#51a2b0',
                 position: 'relative',
-                marginLeft: 85,
-                marginBottom: 10,
+                marginLeft: 60,
+                marginBottom: 40,
                 top: 2,
                 left: 15,
                 borderRadius: 5,
@@ -86,7 +88,7 @@ const CustomDrawer = props => {
             console.warn('Do more');
           }}>
           <Text
-            style={{color: '#545353', paddingVertical: 5, marginBottom: 10}}>
+            style={{color: '#545353', paddingVertical: 10, marginBottom: 10}}>
             Do more with your account
           </Text>
         </Pressable>
