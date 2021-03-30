@@ -15,7 +15,7 @@ const HomeSearch = () => {
   };
 
   return (
-    <View>
+    <View style={{backgroundColor: 'black', bottom: 10}}>
       {/* Input Box */}
       <Pressable onPress={goToSearch} style={styles.inputBox}>
         <Text style={styles.inputText}>Where to? </Text>
@@ -29,7 +29,7 @@ const HomeSearch = () => {
 
       {/* Previous Destination */}
       <View style={styles.row}>
-        <View style={[styles.iconContainer, {backgroundColor: '#218cff'}]}>
+        <View style={[styles.iconContainer, {backgroundColor: '#3ba7d1'}]}>
           <AntDesign name={'clockcircle'} size={19} color={'#fff'} />
         </View>
         <Text style={styles.destinationText}>Previous Destination</Text>
@@ -37,7 +37,7 @@ const HomeSearch = () => {
 
       {/* Home Destination */}
       <View style={styles.row}>
-        <View style={[styles.iconContainer, {backgroundColor: '#218cff'}]}>
+        <View style={[styles.iconContainer, {backgroundColor: '#3ba7d1'}]}>
           <Entypo name={'home'} size={19} color={'#fff'} />
         </View>
         <Text style={styles.destinationText}>Home Destination</Text>
