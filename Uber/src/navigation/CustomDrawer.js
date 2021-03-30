@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Pressable} from 'react-native';
 import {
   DrawerContentScrollView,
   DrawerItemList,
@@ -8,8 +8,7 @@ import {
 const CustomDrawer = props => {
   return (
     <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
-      <View style={{backgroundColor: 'black'}}>
+      <View style={{backgroundColor: 'black', padding: 15}}>
         {/* User Row */}
 
         {/* Messages Row */}
@@ -17,7 +16,14 @@ const CustomDrawer = props => {
         {/* Do More row */}
 
         {/* Make Money Row */}
+        <Pressable
+          onPress={() => {
+            console.warn('Make money');
+          }}>
+          <Text style={{color: 'white'}}>Make me money driving</Text>
+        </Pressable>
       </View>
+      <DrawerItemList {...props} />
     </DrawerContentScrollView>
   );
 };
