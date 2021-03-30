@@ -19,4 +19,5 @@ const PlaceRow = ({data}) => {
     </View>
   );
 };
+
 export default PlaceRow;

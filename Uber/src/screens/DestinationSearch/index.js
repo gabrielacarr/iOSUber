@@ -20,13 +20,9 @@ const DestinationSearch = () => {
   const [destinationPlace, setDestinationPlace] = useState(null);
 
   const navigation = useNavigation();
-
   const checkNavigation = () => {
     if (originPlace && destinationPlace) {
-      navigation.navigate('SearchResults', {
-        originPlace,
-        destinationPlace,
-      });
+      navigation.navigate('SearchResults');
     }
   };
 
@@ -40,7 +36,7 @@ const DestinationSearch = () => {
         <GooglePlacesAutocomplete
           placeholder="From"
           onPress={(data, details = null) => {
-            setOriginPlace({data, details});
+            setOriginPlace({data, details}, checkNavigation);
           }}
           enablePoweredByContainer={false}
           suppressDefaultStyles
@@ -66,7 +62,7 @@ const DestinationSearch = () => {
           placeholder="Where to?"
           onPress={(data, details = null) => {
             // 'details' is provided when fetchDetails = true
-            setDestinationPlace({data, details});
+            setDestinationPlace({data, details}, checkNavigation);
           }}
           enablePoweredByContainer={false}
           suppressDefaultStyles
@@ -84,9 +80,7 @@ const DestinationSearch = () => {
             language: 'en',
           }}
           renderRow={data => <PlaceRow data={data} />}
-          renderDescription={data => {
-            data.description || data.vicinity;
-          }}
+          renderDescription={data => data.description || data.vicinity}
         />
         {/* Circles on left of origin input */}
         <View style={styles.circle} />
