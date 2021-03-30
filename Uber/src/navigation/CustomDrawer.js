@@ -9,14 +9,14 @@ import {
 
 const CustomDrawer = props => {
   return (
-    <DrawerContentScrollView {...props}>
+    <DrawerContentScrollView style={{backgroundColor: 'black'}} {...props}>
       <View style={{backgroundColor: 'black', padding: 15}}>
         {/* User Row */}
         <View
           style={{
-            flexDirection: 'row',
+            flexDirection: 'column',
             alignItems: 'center',
-            paddingVertical: 25,
+            paddingVertical: 40,
           }}>
           <View
             style={{
@@ -25,13 +25,20 @@ const CustomDrawer = props => {
               height: 50,
               borderRadius: 25,
               marginRight: 10,
+              bottom: 20,
             }}>
             <Entypo name={'user'} size={49} color={'black'} />
           </View>
-          <View>
-            <Text style={{color: 'white', fontSize: 20}}>Gabriela Cardo</Text>
-            <Text style={{color: 'lightgrey'}}>
-              5.00 <AntDesign name={'star'} size={13} color={'#DFDEDE'} />
+          <View style={{alignItems: 'center'}}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: 20,
+              }}>
+              Gabriela Cardo
+            </Text>
+            <Text style={{color: '#A19F9F'}}>
+              5.00 <AntDesign name={'star'} size={13} color={'#A19F9F'} />
             </Text>
           </View>
         </View>
@@ -66,13 +73,23 @@ const CustomDrawer = props => {
           </Text>
         </Pressable>
 
+        {/* Food Delivery Row */}
+        <Pressable
+          onPress={() => {
+            console.warn('Food delivery');
+          }}>
+          <Text style={{color: '#DFDEDE', paddingVertical: 5}}>
+            Get food delivered!
+          </Text>
+        </Pressable>
+
         {/* Make Money Row */}
         <Pressable
           onPress={() => {
             console.warn('Make money');
           }}>
           <Text style={{color: '#DFDEDE', paddingVertical: 5}}>
-            Make me money driving
+            Make money driving
           </Text>
         </Pressable>
       </View>

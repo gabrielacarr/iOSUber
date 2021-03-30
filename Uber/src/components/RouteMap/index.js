@@ -3,7 +3,7 @@ import {View, Image, Dimensions} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import cars from '../../assets/data/cars';
 import MapViewDirections from 'react-native-maps-directions';
-
+import {mapStyle} from './constants/mapStyle';
 const GOOGLE_MAPS_APIKEY = 'AIzaSyCvkTcVKIt8528UDp__D - S_du5zd__jE14';
 
 // san fran origin

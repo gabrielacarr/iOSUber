@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Image, Dimensions, FlatList} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
+import {mapStyle} from './constants/mapStyle';
 import cars from '../../assets/data/cars';
 
 const HomeMap = () => {

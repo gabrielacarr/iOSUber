@@ -9,15 +9,26 @@ import CustomDrawer from './CustomDrawer';
 const Drawer = createDrawerNavigator();
 
 const DummyScreen = props => (
-  <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-    <Text>{props.name}</Text>
+  <View
+    style={{
+      backgroundColor: 'black',
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    }}>
+    <Text style={{color: '#A19F9F'}}>{props.name}</Text>
   </View>
 );
 
 const RootNavigation = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator drawerContent={props => <CustomDrawer {...props} />}>
+      <Drawer.Navigator
+        drawerContentOptions={{
+          activeTintColor: '#51a2b0',
+          inactiveTintColor: '#e3e4e6',
+        }}
+        drawerContent={props => <CustomDrawer {...props} />}>
         <Drawer.Screen name="Home" component={HomeNavigation} />
 
         <Drawer.Screen name="Your Trips">
