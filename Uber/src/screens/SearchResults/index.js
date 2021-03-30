@@ -8,9 +8,10 @@ import {useRoute} from '@react-navigation/native';
 const SearchResults = () => {
   const route = useRoute();
   console.log(route.params);
+  const {originPlace, destinationPlace} = route.params;
   return (
     <View>
-      <RouteMap />
+      <RouteMap origin={originPlace} destination={destinationPlace} />
       <UberTypes />
     </View>
   );

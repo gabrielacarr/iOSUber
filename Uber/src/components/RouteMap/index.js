@@ -7,14 +7,15 @@ import MapViewDirections from 'react-native-maps-directions';
 const GOOGLE_MAPS_APIKEY = 'AIzaSyCvkTcVKIt8528UDp__D - S_du5zd__jE14';
 
 // san fran origin
-const RouteMap = () => {
-  const origin = {
-    latitude: 37.773972,
-    longitude: -122.431297,
+const RouteMap = ({origin, destination}) => {
+  const originLoc = {
+    latitude: origin.details.geometry.location.lat,
+    longitude: origin.details.geometry.location.lng,
   };
-  const destination = {
-    latitude: 37.773972,
-    longitude: -122.431297,
+
+  const destinationLoc = {
+    latitude: destination.details.geometry.location.lat,
+    longitude: destination.details.geometry.location.lng,
   };
   return (
     <View
@@ -35,8 +36,8 @@ const RouteMap = () => {
           longitudeDelta: 0.0421,
         }}>
         <MapViewDirections
-          origin={origin}
-          destination={destination}
+          origin={originLoc}
+          destination={destinationLoc}
           apikey={GOOGLE_MAPS_APIKEY}
           strokeWidth={4}
           strokeColor="#4895ef"
