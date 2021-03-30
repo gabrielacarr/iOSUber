@@ -1,11 +1,16 @@
 import React from 'react';
 import {View, Text} from 'react-native';
+import {
+  DrawerContentScrollView,
+  DrawerItemList,
+} from '@react-navigation/drawer';
 
-const CustomDrawer = () => {
+const CustomDrawer = props => {
   return (
-    <View>
+    <DrawerContentScrollView {...props}>
       <Text> customDrawer component</Text>
-    </View>
+      <DrawerItemList {...props} />
+    </DrawerContentScrollView>
   );
 };
 export default CustomDrawer;
