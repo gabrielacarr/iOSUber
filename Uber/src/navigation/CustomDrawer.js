@@ -8,8 +8,16 @@ import {
 const CustomDrawer = props => {
   return (
     <DrawerContentScrollView {...props}>
-      <Text> customDrawer component</Text>
       <DrawerItemList {...props} />
+      <View style={{backgroundColor: 'black'}}>
+        {/* User Row */}
+
+        {/* Messages Row */}
+
+        {/* Do More row */}
+
+        {/* Make Money Row */}
+      </View>
     </DrawerContentScrollView>
   );
 };
