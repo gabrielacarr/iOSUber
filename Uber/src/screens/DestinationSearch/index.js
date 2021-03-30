@@ -22,7 +22,10 @@ const DestinationSearch = () => {
   const navigation = useNavigation();
   const checkNavigation = () => {
     if (originPlace && destinationPlace) {
-      navigation.navigate('SearchResults');
+      navigation.navigate('SearchResults', {
+        originPlace,
+        destinationPlace,
+      });
     }
   };
 
@@ -36,7 +39,7 @@ const DestinationSearch = () => {
         <GooglePlacesAutocomplete
           placeholder="From"
           onPress={(data, details = null) => {
-            setOriginPlace({data, details}, checkNavigation);
+            setOriginPlace({data, details});
           }}
           enablePoweredByContainer={false}
           suppressDefaultStyles
@@ -62,7 +65,7 @@ const DestinationSearch = () => {
           placeholder="Where to?"
           onPress={(data, details = null) => {
             // 'details' is provided when fetchDetails = true
-            setDestinationPlace({data, details}, checkNavigation);
+            setDestinationPlace({data, details});
           }}
           enablePoweredByContainer={false}
           suppressDefaultStyles
