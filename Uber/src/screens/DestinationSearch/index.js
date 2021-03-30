@@ -1,27 +1,37 @@
 import React, {useState, useEffect} from 'react';
-import {View, SafeAreaView} from 'react-native';
+import {View, TextInput, SafeAreaView} from 'react-native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
+import {useNavigation} from '@react-navigation/native';
 import PlaceRow from './PlaceRow';
 import styles from './styles';
 
 // Predefined places
 const homePlace = {
   description: 'Home',
-  geometry: {location: {lat: 48.8152937, lng: 2.4597668}},
+  geometry: {location: {lat: 37.773972, lng: -122.47409}},
 };
 const workPlace = {
   description: 'Work',
-  geometry: {location: {lat: 48.8496818, lng: 2.2940881}},
+  geometry: {location: {lat: 37.773972, lng: -122.419297}},
 };
 
 const DestinationSearch = () => {
   const [originPlace, setOriginPlace] = useState(null);
   const [destinationPlace, setDestinationPlace] = useState(null);
 
-  useEffect(() => {
-    if (originPlace && setOriginPlace) {
-      console.warn('Redirect to results');
+  const navigation = useNavigation();
+
+  const checkNavigation = () => {
+    if (originPlace && destinationPlace) {
+      navigation.navigate('SearchResults', {
+        originPlace,
+        destinationPlace,
+      });
     }
+  };
+
+  useEffect(() => {
+    checkNavigation();
   }, [originPlace, destinationPlace]);
 
   return (
@@ -30,8 +40,7 @@ const DestinationSearch = () => {
         <GooglePlacesAutocomplete
           placeholder="From"
           onPress={(data, details = null) => {
-            // 'details' is provided when fetchDetails = true
-            setDestinationPlace({data, details});
+            setOriginPlace({data, details});
           }}
           enablePoweredByContainer={false}
           suppressDefaultStyles
@@ -49,9 +58,7 @@ const DestinationSearch = () => {
             language: 'en',
           }}
           renderRow={data => <PlaceRow data={data} />}
-          renderDescription={data => {
-            data.description || data.vicinity;
-          }}
+          renderDescription={data => data.description || data.vicinity}
           predefinedPlaces={[homePlace, workPlace]}
         />
 
@@ -59,7 +66,7 @@ const DestinationSearch = () => {
           placeholder="Where to?"
           onPress={(data, details = null) => {
             // 'details' is provided when fetchDetails = true
-            setOriginPlace({data, details});
+            setDestinationPlace({data, details});
           }}
           enablePoweredByContainer={false}
           suppressDefaultStyles

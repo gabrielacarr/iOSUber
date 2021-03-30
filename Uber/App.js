@@ -52,6 +52,7 @@ const App: () => React$Node = () => {
       Geolocation.requestAuthorization();
     }
   }, []);
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
