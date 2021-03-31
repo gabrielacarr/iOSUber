@@ -33,9 +33,9 @@
 
 - Places Autocomplete styles
 - Places Autocomplete Current Location
-  -- Install Geo location
-  -- Request Permission to use Location
-  -- Use the location in Places autocomplete component - Add Predefined Location (HOME, WORK)
+- Install Geo location
+- Request Permission to use Location
+- Use the location in Places autocomplete component - Add Predefined Location (HOME, WORK)
 
 <details>
   <summary>Click to expand for Resources + installation steps</summary>
