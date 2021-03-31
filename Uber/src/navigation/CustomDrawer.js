@@ -20,7 +20,7 @@ const CustomDrawer = props => {
           }}>
           <View
             style={{
-              backgroundColor: '#75bbc70',
+              backgroundColor: '#50a1ba',
               width: 60,
               height: 60,
               borderRadius: 35,

@@ -1,9 +1,7 @@
 import React from 'react';
-import {View, Image, Dimensions} from 'react-native';
+import {View, Dimensions} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
-import cars from '../../assets/data/cars';
 import MapViewDirections from 'react-native-maps-directions';
-import {mapStyle} from '../constant/mapStyle';
 
 const GOOGLE_MAPS_APIKEY = 'AIzaSyCvkTcVKIt8528UDp__D - S_du5zd__jE14';
 
@@ -29,8 +27,7 @@ const RouteMap = ({origin, destination}) => {
         mapStyle,
       }}>
       <MapView
-        customMapStyle={mapStyle}
-        mapStyle={{
+        style={{
           width: Dimensions.get('window').width,
           height: Dimensions.get('window').height,
         }}
@@ -41,8 +38,7 @@ const RouteMap = ({origin, destination}) => {
           longitude: -122.431297,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
-        }}
-        mapType="standard">
+        }}>
         <MapViewDirections
           origin={originLoc}
           destination={destinationLoc}
