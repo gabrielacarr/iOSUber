@@ -4,18 +4,19 @@ const styles = StyleSheet.create({
   container: {
     padding: 10,
     height: '100%',
+    top: 10,
   },
   textInput: {
     padding: 10,
     backgroundColor: '#50a1ba',
-    opacity: 0.5,
+    // opacity: 0.5,
     marginVertical: 5,
     marginLeft: 20,
-    borderRadius: 15,
+    borderRadius: 10,
   },
   separator: {
-    backgroundColor: '#efefef',
-    height: 1,
+    // backgroundColor: '#efefef',
+    // height: 1,
   },
   listView: {
     position: 'absolute',
@@ -31,9 +32,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginVertical: 9,
+    padding: 15,
+    backgroundColor: '#a8b5b5',
+    borderRadius: 25,
   },
   iconContainer: {
-    backgroundColor: '#a2a2a2',
+    backgroundColor: '#50a1ba',
     padding: 5,
     borderRadius: 50,
     marginRight: 15,
