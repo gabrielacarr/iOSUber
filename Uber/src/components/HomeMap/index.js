@@ -25,7 +25,7 @@ const darkMode = [
     elementType: 'labels.text.fill',
     stylers: [
       {
-        color: '#757575',
+        color: '#293b40',
       },
     ],
   },
@@ -205,7 +205,7 @@ const HomeMap = () => {
   return (
     <View
       style={{
-        height: Dimensions.get('window').height - 390,
+        height: Dimensions.get('window').height - 380,
         width: Dimensions.get('window').width,
         // height: Dimensions.get('window').height,
         backgroundColor: 'black',
@@ -234,7 +234,7 @@ const HomeMap = () => {
             <Image
               style={{
                 width: 70,
-                height: 50,
+                height: 40,
                 resizeMode: 'contain',
                 transform: [
                   {

@@ -11,8 +11,8 @@ const SearchResults = () => {
   const {originPlace, destinationPlace} = route.params;
   return (
     <View>
-      <RouteMap origin={originPlace} destination={destinationPlace} />
       <UberTypes />
+      <RouteMap origin={originPlace} destination={destinationPlace} />
     </View>
   );
 };

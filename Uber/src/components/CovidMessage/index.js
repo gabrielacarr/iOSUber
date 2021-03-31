@@ -7,7 +7,7 @@ const CovidMessage = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>
-        <Ionicons name={'ios-warning-outline'} size={20} />
+        <Ionicons name={'ios-warning-outline'} size={23} color={'#edc047'} />
         <Text> </Text>
         Help keep your community safe
       </Text>

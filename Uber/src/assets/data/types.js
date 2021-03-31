@@ -17,4 +17,4 @@ export default [
     price: 36,
     duration: 27,
   },
-]
+];

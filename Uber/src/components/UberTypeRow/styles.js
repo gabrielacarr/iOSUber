@@ -5,11 +5,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     padding: 20,
+    bottom: 20,
+    // top: 20,
+    backgroundColor: '#F9F9F9',
+    // backgroundColor: 'red',
+    // borderTopLeftRadius: 18,
+    // borderTopRightRadius: 18,
   },
   image: {
-    height: 70,
+    height: 55,
     width: 80,
     resizeMode: 'contain',
+    // borderRadius: 45,
   },
   middleContainer: {
     flex: 1,
@@ -17,8 +24,8 @@ const styles = StyleSheet.create({
   },
   type: {
     fontWeight: 'bold',
-    fontSize: 18,
-    marginBottom: 5,
+    fontSize: 16,
+    marginBottom: 1,
   },
   time: {
     color: '#5d5d5d',
