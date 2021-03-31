@@ -6,9 +6,9 @@
 - [x] Basic Navigation
 - [x] Drawer Navigation (Hamburger menu)
 - [x] AWS Setup
-- [ ] Cognito Authentication
-- [ ] Implement DynamoDB
-- [ ] Post confirmation Lambda Trigger
+- [x] Cognito Authentication
+- [x] Implement DynamoDB
+- [x] Post confirmation Lambda Trigger
 - [ ] AppSync
 - [ ] Connect API + database (GraphQL)
 - [ ] Deploy API
@@ -204,20 +204,30 @@ Amplify.configure(config)
 <hr>
 <b> Authentication </b>
 
-- Install
-- Setup
-- Connect
+- [x] Manual configuration
+- [x] Lambda Triggers: Post confirmation // locally
+- [x] Create module
+- [x] Configure App.js
+
 <details>
-  <summary>Click to expand for Resources + installation steps</summary>
-<b>iOS Resources:</b>
 
 ```
 npx amplify add auth
 ```
 
-- [ ] Manual configuration
-- [x] Lambda Triggers: Post confirmation // locally
-- [ ] Create module
-- [ ] Configure App.js
+</details>
+<hr>
+
+<b>GraphQL API</b>
+
+<details>
+
+```
+npx amplify add api
+```
+
+</details>
+- [ ]Write user model
+- [ ] amplify push to the cloud
 
 </details>
