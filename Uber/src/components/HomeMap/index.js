@@ -1,7 +1,8 @@
 import React from 'react';
-import {View, Image, Dimensions, FlatList} from 'react-native';
+import {View, Image, Dimensions, StyleSheet} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
-import {mapStyle} from './constants/mapStyle';
+
+import {mapStyle} from '../constant/mapStyle';
 import cars from '../../assets/data/cars';
 
 const HomeMap = () => {
@@ -19,12 +20,17 @@ const HomeMap = () => {
     <View
       style={{
         height: Dimensions.get('window').height - 390,
-        backgroundColor: '#a0abff',
+        backgroundColor: 'white',
         justifyContent: 'center',
         alignItems: 'center',
+        mapStyle,
       }}>
       <MapView
-        style={{width: '100%', height: '100%'}}
+        customMapStyle={mapStyle}
+        mapStyle={{
+          width: Dimensions.get('window').width,
+          height: Dimensions.get('window').height,
+        }}
         provider={PROVIDER_GOOGLE}
         showsUserLocation={true}
         initialRegion={{
@@ -32,7 +38,8 @@ const HomeMap = () => {
           longitude: -122.431297,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
-        }}>
+        }}
+        mapType="standard">
         {cars.map(car => (
           <Marker
             key={car.id}
@@ -40,7 +47,7 @@ const HomeMap = () => {
             <Image
               style={{
                 width: 70,
-                height: 70,
+                height: 50,
                 resizeMode: 'contain',
                 transform: [
                   {

@@ -15,7 +15,7 @@ const HomeSearch = () => {
   };
 
   return (
-    <View style={{backgroundColor: 'black', bottom: 10}}>
+    <View style={{backgroundColor: 'black', top: 1}}>
       {/* Input Box */}
       <Pressable onPress={goToSearch} style={styles.inputBox}>
         <Text style={styles.inputText}>Where to? </Text>
@@ -32,7 +32,7 @@ const HomeSearch = () => {
         <View style={[styles.iconContainer, {backgroundColor: '#3ba7d1'}]}>
           <AntDesign name={'clockcircle'} size={19} color={'#fff'} />
         </View>
-        <Text style={styles.destinationText}>Previous Destination</Text>
+        <Text style={styles.destinationText}>Previous Destinations</Text>
       </View>
 
       {/* Home Destination */}
