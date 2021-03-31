@@ -1,10 +1,13 @@
-<b>My Task's + References:</b>
+<b>My Task's on the fly + References:</b>
 
-- Customize Maps
-- Customize Google Places Autocomplete - User location (Realtime)
-- Nearby places suggestions
-- Basic Navigation
-- Drawer Navigation (Hamburger menu)
+- [x] Customize Maps
+- [x] Customize Google Places Autocomplete - User location (Realtime)
+- [x] Nearby places suggestions
+- [x] Basic Navigation
+- [x] Drawer Navigation (Hamburger menu)
+- [x] AWS Setup
+-
+-
 
 <hr>
 
@@ -57,6 +60,7 @@ npx react-native run-ios
 - Install React-Navigation library and follow the installation guide - Defined all the screens in a Stack Navigator
 - Implement the Navigation between screens
 - Send data between screens
+- Update the dark mode as reusable component
 
 <details>
   <summary>Click to expand for Resources + installation steps</summary>
@@ -112,5 +116,75 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 const Drawer = createDrawerNavigator();
 // Then insert in app.js to initialize (or corresponding file)
 ```
+
+</details>
+
+<hr>
+<b> AWS Amplify Setup </b>
+
+- Install and configure the Amplify CLI
+- Setup fullstack project
+- Connect to AWS
+<details>
+  <summary>Click to expand for Resources + installation steps</summary>
+<b>iOS Resources:</b>
+
+([Documentation for installation](https://docs.amplify.aws/start/getting-started/installation/q/integration/react-native))
+
+<details><summary>Prerequisites for CLI</summary>
+
+```
+
+npm install -g @aws-amplify/cli
+// sudo since it is installed globally
+
+npx amplify configure
+// sign into AWS console
+
+// Amazon IAM creation will display:
+Specify the AWS Region
+? region:  # Your preferred region
+Specify the username of the new IAM user:
+? user name:  # User name for Amplify IAM user
+Complete the user creation using the AWS console
+
+
+
+// provide 'accessKeyId` + `secretAccessKey`
+// prompts that display:
+Enter the access key of the newly created user:
+? accessKeyId:  # YOUR_ACCESS_KEY_ID
+? secretAccessKey:  # YOUR_SECRET_ACCESS_KEY
+This would update/create the AWS Profile in your local machine
+? Profile Name:  # (default)
+
+Successfully set up the new user.
+
+```
+
+</details>
+<details>
+<summary>Initialize Amplify</summary>
+
+```
+cd Uber // cd into project name
+
+npx amplify init
+
+
+// Install Amplify libraries
+npm install aws-amplify aws-amplify-react-native amazon-cognito-identity-js @react-native-community/netinfo
+
+npx pod-install // cd iOS
+
+
+cd Uber // return to project
+// import
+import Amplify from 'aws-amplify'
+import config from './aws-exports'
+Amplify.configure(config)
+```
+
+</details>
 
 </details>
