@@ -23,7 +23,6 @@ navigator.geolocation = require('@react-native-community/geolocation');
 import Amplify from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
-/*=============== END AWS =================*/
 
 const App: () => React$Node = () => {
   const androidPermission = async () => {
@@ -50,6 +49,7 @@ const App: () => React$Node = () => {
     }
   };
 
+  /*================== Permissions =================*/
   useEffect(() => {
     if (Platform.OS === 'android') {
       androidPermission();
