@@ -9,7 +9,9 @@
 - [ ] Connect API + database (GraphQL)
 - [ ] Deploy API
 - [ ] Connect fronted
-      Addt'l:
+
+#### Addt'l:
+
 - [ ] Update ReadMe with new styles
 - [ ] Attach case study
 - [ ] Driver App
