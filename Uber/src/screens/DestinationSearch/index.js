@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, TextInput, SafeAreaView} from 'react-native';
+import {View, TextInput, Text, SafeAreaView} from 'react-native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import {useNavigation} from '@react-navigation/native';
 import PlaceRow from './PlaceRow';
@@ -19,6 +19,7 @@ const DestinationSearch = () => {
   const [originPlace, setOriginPlace] = useState(null);
   const [destinationPlace, setDestinationPlace] = useState(null);
 
+  // Navigation
   const navigation = useNavigation();
   const checkNavigation = () => {
     if (originPlace && destinationPlace) {
@@ -74,6 +75,7 @@ const DestinationSearch = () => {
           suppressDefaultStyles
           styles={{
             textInput: styles.textInput,
+
             container: {
               ...styles.autocompleteContainer,
               top: 55,
@@ -88,6 +90,7 @@ const DestinationSearch = () => {
           renderRow={data => <PlaceRow data={data} />}
           renderDescription={data => data.description || data.vicinity}
         />
+
         {/* Circles on left of origin input */}
         <View style={styles.circle} />
         {/* Line between dots */}

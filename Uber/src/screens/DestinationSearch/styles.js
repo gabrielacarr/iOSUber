@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     borderRadius: 10,
   },
+  status: {
+    padding: 10,
+    textAlign: 'center',
+  },
   separator: {
     // backgroundColor: '#efefef',
     // height: 1,
