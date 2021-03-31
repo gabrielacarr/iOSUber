@@ -34,7 +34,10 @@ const DestinationSearch = () => {
   }, [originPlace, destinationPlace]);
 
   return (
-    <SafeAreaView>
+    <SafeAreaView
+      style={{
+        backgroundColor: 'black',
+      }}>
       <View style={styles.container}>
         <GooglePlacesAutocomplete
           placeholder="From"

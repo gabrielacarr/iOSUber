@@ -7,9 +7,11 @@ const styles = StyleSheet.create({
   },
   textInput: {
     padding: 10,
-    backgroundColor: '#eee',
+    backgroundColor: '#50a1ba',
+    opacity: 0.5,
     marginVertical: 5,
     marginLeft: 20,
+    borderRadius: 15,
   },
   separator: {
     backgroundColor: '#efefef',
@@ -42,17 +44,17 @@ const styles = StyleSheet.create({
   // left of origin
   //////////////////////////////
   circle: {
-    width: 5,
+    width: 6,
     height: 5,
-    backgroundColor: 'black',
+    backgroundColor: '#c4c4c4',
     position: 'absolute',
-    top: 20,
+    top: 25,
     left: 15,
     borderRadius: 5,
   },
   line: {
     width: 1,
-    height: 50,
+    height: 55,
     backgroundColor: '#c4c4c4',
     position: 'absolute',
     top: 28,
@@ -61,7 +63,7 @@ const styles = StyleSheet.create({
   square: {
     width: 5,
     height: 5,
-    backgroundColor: 'black',
+    backgroundColor: '#c4c4c4',
     position: 'absolute',
     top: 80,
     left: 15,
