@@ -6,12 +6,14 @@
 - [x] Basic Navigation
 - [x] Drawer Navigation (Hamburger menu)
 - [x] AWS Setup
-- [] Connect API + database (GraphQL)
-- [] Deploy API
-  Addt'l:
-- [] Update ReadMe with new styles
-- [] Driver App
-- [] Connect Driver + User
+- [ ] Connect API + database (GraphQL)
+- [ ] Deploy API
+- [ ] Connect fronted
+      Addt'l:
+- [ ] Update ReadMe with new styles
+- [ ] Attach case study
+- [ ] Driver App
+- [ ] Connect Driver + User
 
 <hr>
 
