@@ -240,11 +240,14 @@ ion? (Use arrow keys)
   Default configuration with Social Provider (Federation)
   Manual configuration
   I want to learn more.
+
+
+  npx amplify console
 ```
 
 </details>
 
-- [ ] Write user model
-- [ ] amplify push to the cloud
+- [x] Write user model
+- [x] amplify push to the cloud
 
 </details>
