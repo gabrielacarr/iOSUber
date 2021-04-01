@@ -11,6 +11,7 @@
 - [x] Post confirmation Lambda Trigger
 - [x] AppSync
 - [x] Connect API + database (GraphQL)
+- [x] Lambda functions
 - [ ] Deploy API
 - [ ] Connect fronted
 
@@ -249,5 +250,17 @@ ion? (Use arrow keys)
 
 - [x] Write user model
 - [x] amplify push to the cloud
+
+<hr>
+
+<b>Lambda functions</b>
+Can be accessed via amplify console window
+
+- [x] User table name as environment variable
+- [x] IAM Permissions
+- [x] Amazon Resource Name (ARN)
+- [x] Create policy + Attach
+- [x] Access to Lambda for DynamoDB
+- [ ] Test
 
 </details>
