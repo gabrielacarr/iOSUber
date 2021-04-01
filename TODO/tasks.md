@@ -9,8 +9,8 @@
 - [x] Cognito Authentication
 - [x] Implement DynamoDB
 - [x] Post confirmation Lambda Trigger
-- [ ] AppSync
-- [ ] Connect API + database (GraphQL)
+- [x] AppSync
+- [x] Connect API + database (GraphQL)
 - [ ] Deploy API
 - [ ] Connect fronted
 
