@@ -16,5 +16,26 @@
         "uberclone08f1e48208f1e482PostConfirmation": {}
       }
     }
+  },
+  "uberinspo": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-uberclone-uberinspo-224835-authRole",
+      "UnauthRoleArn": "arn:aws:iam::536872432693:role/amplify-uberclone-uberinspo-224835-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::536872432693:role/amplify-uberclone-uberinspo-224835-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-uberclone-uberinspo-224835-deployment",
+      "UnauthRoleName": "amplify-uberclone-uberinspo-224835-unauthRole",
+      "StackName": "amplify-uberclone-uberinspo-224835",
+      "StackId": "arn:aws:cloudformation:us-east-1:536872432693:stack/amplify-uberclone-uberinspo-224835/c1f7f500-9294-11eb-b722-0a8d2759acd3",
+      "AmplifyAppId": "d2mxyd13d4iua1"
+    },
+    "categories": {
+      "function": {
+        "uberclone08f1e48208f1e482PostConfirmation": {}
+      },
+      "auth": {
+        "uberclonead35601c": {}
+      }
+    }
   }
 }

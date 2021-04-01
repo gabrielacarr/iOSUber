@@ -224,10 +224,27 @@ npx amplify add auth
 
 ```
 npx amplify add api
+
+
+? Please select from one of the below mentioned services: GraphQL
+? Provide API name: uberclone
+? Choose the default authorization type for the API Amazon Cognito Use
+r Pool
+Using service: Cognito, provided by: awscloudformation
+
+ The current configured provider is Amazon Cognito.
+
+ Do you want to use the default authentication and security configurat
+ion? (Use arrow keys)
+❯ Default configuration
+  Default configuration with Social Provider (Federation)
+  Manual configuration
+  I want to learn more.
 ```
 
 </details>
-- [ ]Write user model
+
+- [ ] Write user model
 - [ ] amplify push to the cloud
 
 </details>
