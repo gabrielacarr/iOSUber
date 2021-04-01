@@ -31,7 +31,10 @@
     },
     "categories": {
       "function": {
-        "uberclone08f1e48208f1e482PostConfirmation": {}
+        "uberclone08f1e48208f1e482PostConfirmation": {
+          "deploymentBucketName": "amplify-uberclone-uberinspo-224835-deployment",
+          "s3Key": "amplify-builds/uberclone08f1e48208f1e482PostConfirmation-62485164346367694364-build.zip"
+        }
       },
       "auth": {
         "uberclonead35601c": {}
